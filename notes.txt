@@ -13,15 +13,15 @@ Info Card (Bottom Left): Initially displays "Hover an item to view details."
 The Click: Pressing the "Search" button adds one random item from a pool to the next available inventory slot.
 Item Logic: Items are non-stackable (1 item per slot). If the 28 slots are full, the player must trash an item to find more.
 Hover Effect: Hovering over an item in the grid updates the Info Card with the item's Name, Category, Value ($), and Icon.
-Category Highlighting: While hovering over an item, all other items in the inventory belonging to the same category must visually highlight (e.g., change background color).
+Category Highlighting: While hovering over an item, all other items in the inventory belonging to the same category must visually highlight.
 
 3. The Trashing Mechanic (State Lock):
-Right-Click Interaction: Right-clicking an item triggers a "Trash" mode.
+Left-Click Interaction: Left-clicking an item triggers a "Trash" mode.
 Confirmation Loop: The Info Card must change to show the item details followed by the question: "Would you like to trash this item?" with "Confirm" and "Cancel" buttons.
 State Lock: While this question is active, all other game interactions (searching, hovering other items) must be disabled until the player clicks Confirm or Cancel.
 
 4. Technical Specifications:
 Code: Provide a single-file solution (HTML/CSS/JS).
-Visuals: Use a placeholder for a wood-texture background. Use CSS variables for a "bento" look (semi-transparent panels, thin borders).
+Visuals: Use background.png for a wood-texture background for the entire page. Use CSS variables for a "bento" look (semi-transparent panels, thin borders).
 Data: Include a sample array of "Junk" items with different rarities, values, and categories (e.g., Hardware, Tech, Toys).
-
+Use place holder images for the items.

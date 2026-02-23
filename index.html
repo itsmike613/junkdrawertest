@@ -6,27 +6,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pixel Junk Drawer</title>
 
-    <link rel="stylesheet" href="Source/Styles/index.css">
+	<link rel="stylesheet" href="Source/Styles/index.css">
 </head>
 
 <body>
-<div id="bento-container">
-	<button id="search-btn" onclick="findItem()">SEARCH JUNK DRAWER</button>
+	<main class="board" aria-label="Junk Drawer Collection Game">
+		<section class="left-column" aria-label="Controls and information">
+			<div class="panel">
+				<button id="searchBtn" class="search-btn" type="button" aria-label="Search Junk Drawer">
+					Search Junk Drawer
+				</button>
+			</div>
 
-	<div id="stats-card" class="cell">
-		<div class="stat-line"><span>Found:</span> <span id="stat-total" class="stat-val">0</span></div>
-		<div class="stat-line"><span>Unique:</span> <span id="stat-unique" class="stat-val">0/0</span></div>
-		<div class="stat-line"><span>Value:</span> <span id="stat-value" class="stat-val">$0.00</span></div>
-		<div class="stat-line"><span>Grade:</span> <span id="stat-grade" class="stat-val">-</span></div>
-	</div>
+			<section class="panel stats" aria-labelledby="statsHeading">
+				<h2 id="statsHeading" class="sr-only">Drawer Stats</h2>
 
-	<div id="info-card" class="cell">
-		<div id="info-content">Hover an item to view details</div>
-	</div>
+				<div class="stats-row">
+					<span class="label">Total items ever found:</span>
+					<span id="statTotalFound" class="value">0</span>
+				</div>
 
-	<div id="inventory" class="cell">
-	</div>
-</div>
+				<div class="stats-row">
+					<span class="label">Total unique items found:</span>
+					<span id="statUniqueFound" class="value">0 / 0</span>
+				</div>
+
+				<div class="stats-row">
+					<span class="label">Total Value of Drawer ($):</span>
+					<span id="statDrawerValue" class="value">$0.00</span>
+				</div>
+
+				<div class="stats-row">
+					<span class="label">Grade:</span>
+					<span id="statGrade" class="value grade-chip">
+						<span class="grade-letter">F</span>
+						<span id="statGradeLabel">Dust Bunnies</span>
+					</span>
+				</div>
+			</section>
+
+			<section id="infoCard" class="panel info-card default" aria-live="polite" aria-atomic="true">
+				Hover an item to view details
+			</section>
+		</section>
+
+		<section class="panel inventory-panel" aria-labelledby="inventoryHeading">
+			<h2 id="inventoryHeading" class="sr-only">Inventory Grid</h2>
+			<div id="inventoryGrid" class="inventory-grid" role="grid" aria-label="7 by 4 junk drawer inventory">
+				<!-- Slots injected by JS -->
+			</div>
+		</section>
+	</main>
+
 	<script src="Source/Scripts/index.js"></script>
 </body>
 
