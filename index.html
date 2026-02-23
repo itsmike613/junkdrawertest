@@ -10,24 +10,23 @@
 </head>
 
 <body>
+<div id="bento-container">
+	<button id="search-btn" onclick="findItem()">SEARCH JUNK DRAWER</button>
 
-	<div id="bento-container">
-		<button id="search-btn" onclick="findItem()">SEARCH JUNK DRAWER</button>
-
-		<div id="stats-card" class="cell">
-			<div class="stat-line"><span>Found:</span> <span id="stat-total" class="stat-val">0</span></div>
-			<div class="stat-line"><span>Unique:</span> <span id="stat-unique" class="stat-val">0</span></div>
-			<div class="stat-line"><span>Value:</span> <span id="stat-value" class="stat-val">$0.00</span></div>
-		</div>
-
-		<div id="info-card" class="cell">
-			<div id="info-content">Hover an item to view details</div>
-		</div>
-
-		<div id="inventory" class="cell">
-		</div>
+	<div id="stats-card" class="cell">
+		<div class="stat-line"><span>Found:</span> <span id="stat-total" class="stat-val">0</span></div>
+		<div class="stat-line"><span>Unique:</span> <span id="stat-unique" class="stat-val">0/0</span></div>
+		<div class="stat-line"><span>Value:</span> <span id="stat-value" class="stat-val">$0.00</span></div>
+		<div class="stat-line"><span>Grade:</span> <span id="stat-grade" class="stat-val">-</span></div>
 	</div>
 
+	<div id="info-card" class="cell">
+		<div id="info-content">Hover an item to view details</div>
+	</div>
+
+	<div id="inventory" class="cell">
+	</div>
+</div>
 	<script src="Source/Scripts/index.js"></script>
 </body>
 
