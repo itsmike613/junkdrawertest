@@ -1,0 +1,27 @@
+AI Prompt
+-----------------------------------------------------------------------------------------------
+Title: Pixel Art "Junk Drawer" Collection Game
+Style: Bento Box UI (compartmentalized, no empty space between cards), Transparent UI elements, Pixel Art aesthetic.
+
+1. Layout Requirements:
+Inventory Grid: A 7-row by 4-column grid (28 total slots) positioned on the right side of the screen.
+Top Left Card: A full-width "Search Junk Drawer" button.
+Stats Card (Middle Left): Displays "Total items ever found," "Total unique items found," and "Total Value of Drawer ($)."
+Info Card (Bottom Left): Initially displays "Hover an item to view details."
+
+2. Core Gameplay & Interaction:
+The Click: Pressing the "Search" button adds one random item from a pool to the next available inventory slot.
+Item Logic: Items are non-stackable (1 item per slot). If the 28 slots are full, the player must trash an item to find more.
+Hover Effect: Hovering over an item in the grid updates the Info Card with the item's Name, Category, Value ($), and Icon.
+Category Highlighting: While hovering over an item, all other items in the inventory belonging to the same category must visually highlight (e.g., change background color).
+
+3. The Trashing Mechanic (State Lock):
+Right-Click Interaction: Right-clicking an item triggers a "Trash" mode.
+Confirmation Loop: The Info Card must change to show the item details followed by the question: "Would you like to trash this item?" with "Confirm" and "Cancel" buttons.
+State Lock: While this question is active, all other game interactions (searching, hovering other items) must be disabled until the player clicks Confirm or Cancel.
+
+4. Technical Specifications:
+Code: Provide a single-file solution (HTML/CSS/JS).
+Visuals: Use a placeholder for a wood-texture background. Use CSS variables for a "bento" look (semi-transparent panels, thin borders).
+Data: Include a sample array of "Junk" items with different rarities, values, and categories (e.g., Hardware, Tech, Toys).
+
